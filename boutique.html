@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Boutique | Andalouss Traditionnel Divers</title>
+<title>Boutique | Andalouss Traditionnel Divers</title><script defer src="/boutique-links.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@500;600&display=swap');
 /* Catalogue : navigation par catégories et sélection de réalisations sur mesure. */
@@ -34,3 +34,4 @@
 </div></section>
 <script>document.querySelector('#count').textContent=document.querySelectorAll('.product').length+' réalisations sur mesure';</script>
 <section class="bottom"><div><p class="kicker">PROJET SUR MESURE</p><h2>Une idée, un croquis,<br>une pièce unique.</h2></div><a href="/#devis">Demander un devis →</a></section></main><script>const products=[...document.querySelectorAll('.product')],count=document.querySelector('#count'),sort=document.querySelector('#sort');function display(category='all'){products.forEach(p=>p.hidden=category!=='all'&&p.dataset.category!==category);const n=products.filter(p=>!p.hidden).length;count.textContent=(category==='all'?n+' réalisations sur mesure':n+' réalisations dans cette catégorie');document.querySelector('#produits').scrollIntoView({behavior:'smooth',block:'start'})}document.querySelectorAll('.category').forEach(c=>c.addEventListener('click',()=>display(c.dataset.category)));sort.addEventListener('change',()=>{const list=document.querySelector('#products');const visible=products.filter(p=>!p.hidden).sort((a,b)=>sort.value==='za'?b.dataset.name.localeCompare(a.dataset.name):a.dataset.name.localeCompare(b.dataset.name));if(sort.value==='default')products.forEach(p=>list.append(p));else visible.forEach(p=>list.append(p))});</script></body></html>
+
