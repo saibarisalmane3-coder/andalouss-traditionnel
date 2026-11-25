@@ -24,3 +24,4 @@ const products={
 const name=new URLSearchParams(location.search).get('p')||'Mur mosaïque traditionnel',p=products[name]||products['Mur mosaïque traditionnel'];document.title=name+' | Andalouss Traditionnel Divers';document.querySelector('#title').textContent=name;document.querySelector('#crumb').textContent=name;document.querySelector('#category').textContent=p.cat;document.querySelector('#description').textContent=p.desc;document.querySelector('#image').src=p.img;document.querySelector('#image').alt=name;document.querySelector('#related').innerHTML=Object.entries(products).filter(([n])=>n!==name).slice(0,3).map(([n,x])=>`<a href="/produit.html?p=${encodeURIComponent(n)}"><img src="${x.img}" alt="${n}"><div><small>${x.cat}</small><h3>${n}</h3></div></a>`).join('');
 </script></body></html>
 
+<script>(function(){document.querySelectorAll('header a,header button').forEach(function(x){if(/^Collections/i.test((x.textContent||'').trim()))x.remove()})})();</script>
